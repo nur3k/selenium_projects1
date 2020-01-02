@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import Select
 class AllegroSearch(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
+        self.driver = webdriver.wait
 
     def test_search_in_python_org(self):
         driver = self.driver

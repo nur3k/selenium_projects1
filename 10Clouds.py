@@ -42,7 +42,7 @@ class APITests(unittest.TestCase):
         data = {"title": 'Changed Title', "body": 'Changed Body'}
         requests.patch(path, data)
         edited_comment = self.return_given_post_as_json(self.given_postid)
-        assert all([k in edited_comment.keys() and v in edited_comment[k] for k, v in data.items()])
+        assert all(item in edited_comment.items() for item in data.items())
 
     def test_delete_post(self):
         path = self.page_url + '/posts/{}'.format(self.post_to_delete_id)

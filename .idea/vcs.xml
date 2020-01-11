@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../PyPaint" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/APISERVER/json-server" vcs="Git" />
   </component>
 </project>

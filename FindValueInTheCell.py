@@ -15,7 +15,7 @@ class SalarySearch(unittest.TestCase):
         header = table.find_elements_by_tag_name("th")
         row = table.find_elements_by_tag_name("tr")
 
-        index_of_column = 1
+        index_of_column = 1     
         index_of_row = 2
         DESIRED_HEADER = "Salary"
         DESIRED_ROW = "Automation Testing Architect"

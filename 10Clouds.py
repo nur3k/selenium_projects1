@@ -5,7 +5,6 @@ import requests
 class APITests(unittest.TestCase):
     def setUp(self):
         self.page_url = "https://jsonplaceholder.typicode.com"
-        #self.page_url = "http://localhost:3000"
         self.given_postid = 13
         self.desired_number_of_comments = 5
         self.post_to_delete_id = 14
@@ -49,7 +48,6 @@ class APITests(unittest.TestCase):
         path = self.page_url + '/posts/{}'.format(self.post_to_delete_id)
         requests.delete(path)
         assert not self.return_given_post_as_json(self.post_to_delete_id)
-
 
 
 if __name__ == "__main__":

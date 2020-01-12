@@ -21,10 +21,11 @@ class APITests(unittest.TestCase):
 
     def test_comment_atributes(self):
         post_comments = self.return_comments_from_given_posts_nr_as_json(self.given_postid)
-        assert isinstance(post_comments[0]["postId"], int)
-        assert isinstance(post_comments[0]["id"], int)
-        assert isinstance(post_comments[0]["email"], str)
-        assert isinstance(post_comments[0]["body"], str)
+        comment_num = 1
+        assert isinstance(post_comments[comment_num]["postId"], int)
+        assert isinstance(post_comments[comment_num]["id"], int)
+        assert isinstance(post_comments[comment_num]["email"], str)
+        assert isinstance(post_comments[comment_num]["body"], str)
 
     def test_desired_number_of_comments(self):
         posted_comments = self.return_comments_from_given_posts_nr_as_json(self.given_postid)

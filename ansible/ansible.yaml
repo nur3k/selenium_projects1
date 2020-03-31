@@ -1,0 +1,35 @@
+---
+
+- name: Task list
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - name: Create users
+      user:
+        name: "{{ item }}"
+      with_items:
+        - "dev"
+        - "dev_qa"
+        - "devops"
+        - "prod_app"
+
+    - name: Modify Sudoers
+      lineinfile:
+        path: /etc/sudoers
+        insertafter: '^# User privilege specification'
+        line: "{{ item }}  ALL=(ALL) NOPASSWD{{ ':' }} /bin/su prod_app"
+        create: yes
+      with_items:
+        - "dev"
+        - "dev_qa"
+        - "devops"
+
+    - name: Create user welcome message
+      lineinfile:
+        path: /home/{{ item }}/.bashrc
+        line: 'echo Hello $USER'
+      with_items:
+        - "dev"
+        - "dev_qa"
+        - "devops"

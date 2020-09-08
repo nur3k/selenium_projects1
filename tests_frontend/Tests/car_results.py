@@ -16,7 +16,7 @@ class GoogleTesting(unittest.TestCase):
         inst.home.send_enter_button()
 
         inst.result = Result(inst.driver)
-        inst.result.wait_for_resultpage_to_be_loaded()
+        inst.result.wait_fooptionsr_resultpage_to_be_loaded()
 
     def test_records_how_many_findings(self):
         result_text = self.result.return_how_many_findings_str()

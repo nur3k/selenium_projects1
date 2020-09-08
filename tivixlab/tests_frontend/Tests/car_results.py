@@ -4,8 +4,6 @@ from selenium import webdriver
 from tivixlab.tests_frontend.Pages.HomePage import Home
 from tivixlab.tests_frontend.Pages.ResultPage import Result
 
-driver = webdriver.Chrome(executable_path=r'C:\chromedriver\chromedriver.exe')
-
 
 class QaLabTesting(unittest.TestCase):
     @classmethod

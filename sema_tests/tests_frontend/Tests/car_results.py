@@ -1,8 +1,8 @@
 import unittest
 from selenium import webdriver
 
-from tests_frontend.Pages.HomePage import Home
-from tests_frontend.Pages.ResultPage import Result
+from sema_tests.tests_frontend.Pages.HomePage import Home
+from sema_tests.tests_frontend.Pages.ResultPage import Result
 
 
 class GoogleTesting(unittest.TestCase):

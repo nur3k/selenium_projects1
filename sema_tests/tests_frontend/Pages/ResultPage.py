@@ -1,7 +1,7 @@
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 
-from tests_frontend.Pages.locators import Locators
+from sema_tests.tests_frontend.Pages.locators import Locators
 
 
 class Result:

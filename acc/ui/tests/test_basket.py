@@ -13,5 +13,5 @@ def take_two_most_expensive(result_page):
     result_page.sort_most_expensive()
 
 
-def test_123(search_for_monitor, take_two_most_expensive):
+def test_sorting_most_expensive(search_for_monitor, take_two_most_expensive):
     assert 1 == 1

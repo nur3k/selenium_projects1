@@ -2,11 +2,11 @@
 
 import pytest
 
-from constants import Constants
-from driver_wrapper import DriverWrapper
-from pages.main_page import MainPage
-from pages.result_page import ResultPage
-from webdriver_factory import get_webdriver
+from .constants import Constants
+from .driver_wrapper import DriverWrapper
+from .pages.main_page import MainPage
+from .pages.result_page import ResultPage
+from .webdriver_factory import get_webdriver
 
 
 @pytest.fixture(scope='module')

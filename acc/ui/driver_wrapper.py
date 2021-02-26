@@ -1,5 +1,6 @@
 """This module contains methods for wrapping Selenium"""
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -37,3 +38,16 @@ class DriverWrapper():
         """Enters data into textbox"""
         elements = self.get_elements(locator)
         elements[index].send_keys(entry)
+
+    def open_element_in_new_tab(self, locator):
+        element = self.get_element(locator)
+        element.send_keys(Keys.CONTROL + Keys.ENTER)
+
+    def switch_tab(self, idx=0):
+        self.driver.switch_to.window(self.driver.window_handles[idx])
+
+    def close_active_tab(self):
+        self.driver.close()
+
+    def wait_until_element_not_visible(self, locator):
+        WebDriverWait(self.driver, TIMEOUT).until(EC.invisibility_of_element_located(locator))
